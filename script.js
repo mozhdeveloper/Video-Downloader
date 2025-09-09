@@ -59,8 +59,8 @@ document.getElementById('downloadForm').addEventListener('submit', async functio
             
             // Show success message
             resultContainer.innerHTML = `
-                <p>Video downloaded successfully!</p>
-                <a href="${data.download_url}" class="download-link" id="downloadLink">Download Now</a>
+                <p class="mt-3 text-success">Video downloaded successfully!</p>
+                <a href="${data.download_url}" class="download-link text-warning" id="downloadLink">Didn't work? Click here to download manually.</a>
             `;
             resultContainer.className = 'result success';
             resultContainer.style.display = 'block';
@@ -115,6 +115,43 @@ function updateProgressBar() {
 }
 
 /** Frontend Logic **/
+//const form = document.getElementById('search-form');
+const input = document.getElementById('imageUrl');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle?.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('show');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+/*
+form.addEventListener('submit', (e) => {
+                e.preventDefault();
+  const value = input.value.trim();
+
+  try {
+    const u = new URL(value);
+    // Basic image validation
+    const isImage = /\.(png|jpe?g|gif|webp|svg|bmp|ico)$/i.test(u.pathname);
+    if (!isImage) throw new Error('Please paste a direct image URL.');
+    // “Fake” search action: open in a new tab (placeholder for downloader logic)
+    window.open(u.toString(), '_blank', 'noopener,noreferrer');
+    // Blur any focused button to clear hover/active visual state
+    const active = document.activeElement;
+    if (active && active.tagName === 'BUTTON') {
+      active.blur();
+    }
+  } catch {
+    input.focus();
+    input.setSelectionRange(0, input.value.length);
+    input.classList.add('shake');
+    setTimeout(() => input.classList.remove('shake'), 350);
+    alert('Enter a valid direct image URL.');
+  }
+});
+*/
+
 // Ensure the search button returns to normal on touch devices
 document.addEventListener('touchend', (e) => {
   const target = e.target;
