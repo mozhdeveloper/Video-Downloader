@@ -192,7 +192,7 @@ function makeRequest(inputUrl, retries = 1) {
             }
         },
         complete: function () {
-            document.getElementById("downloadBtn").disabled = false; // Re-enable the button
+            document.getElementById("downloadBtnAPI").disabled = false; // Re-enable the button
         }
     });
 }
@@ -247,15 +247,15 @@ function displayError(message) {
 /**
  * Handle the "Download" button click event.
  */
-document.getElementById("downloadBtn").addEventListener("click", debounce(function () {
+document.getElementById("downloadBtnAPI").addEventListener("click", debounce(function () {
     document.getElementById("loading").style.display = "initial";
-    document.getElementById("downloadBtn").disabled = true; // Disable the button
+    document.getElementById("downloadBtnAPI").disabled = true; // Disable the button
 
     const inputUrl = document.getElementById("inputUrl").value.trim();
     if (!inputUrl) {
         displayError("Please enter a valid YouTube URL.");
         document.getElementById("loading").style.display = "none";
-        document.getElementById("downloadBtn").disabled = false;
+        document.getElementById("downloadBtnAPI").disabled = false;
         return;
     }
 

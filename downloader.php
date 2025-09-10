@@ -49,6 +49,11 @@ class VideoDownloader {
         foreach (ALLOWED_DOMAINS as $allowed_domain) {
             if (strpos($domain, $allowed_domain) !== false) {
                 $allowed = true;
+                
+                // Special handling for TikTok
+                if (strpos($domain, 'tiktok') !== false) {
+                    $this->handleTikTokSpecifics();
+                }
                 break;
             }
         }
@@ -67,6 +72,20 @@ class VideoDownloader {
             throw new Exception("This URL cannot be processed. It might be private, age-restricted, or invalid.");
         }
     }
+
+    private function handleTikTokSpecifics() {
+        // TikTok-specific preparation
+        $this->format = 'best'; // Force best format for TikTok
+        $this->addTikTokHeaders();
+    }
+
+    private function addTikTokHeaders() {
+        // TikTok might require specific headers
+        $this->extraOptions = [
+            '--referer', 'https://www.tiktok.com/',
+            '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        ];
+    }
     
     public function download() {
         // Generate unique filename
@@ -75,7 +94,16 @@ class VideoDownloader {
         $this->outputFile = OUTPUT_DIR . $this->filename;
         
         // Build yt-dlp command with full path for Windows
-        $command = '"' . YT_DLP_PATH . '" -f "' . $this->format . '" -o "' . $this->tempFile . '" "' . $this->url . '" 2>&1';
+        //$command = '"' . YT_DLP_PATH . '" -f "' . $this->format . '" -o "' . $this->tempFile . '" "' . $this->url . '" 2>&1';
+
+        $command = YT_DLP_PATH . ' -f "' . $this->format . '" -o "' . $this->tempFile . '" ';
+    
+        // Add extra options for TikTok
+        if (!empty($this->extraOptions)) {
+            $command .= implode(' ', $this->extraOptions) . ' ';
+        }
+        
+        $command .= '"' . $this->url . '" 2>&1';
         
         error_log("Executing command: " . $command);
         
