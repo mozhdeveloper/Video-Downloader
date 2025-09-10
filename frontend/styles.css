@@ -271,7 +271,7 @@
     background: linear-gradient(135deg, #e02f1ade 1%, #e0721a7a 20%, #e3aa00 50%, #e3aa00 100%);
     color: #fff;
     font-weight: 700;
-    
+    padding: 0px 0px;
     cursor: pointer;
     border-left: 1px solid rgba(255,255,255,0.1);
     transition: filter .3s ease .05s, transform .15s ease .05s;
@@ -325,7 +325,7 @@
   }
 
   a[href^="mailto:"] {
-  color: #ffffff;   /* lavender accent */
+  color: #ffffff;   
   font-weight: bold;
   text-decoration: none;
   }
