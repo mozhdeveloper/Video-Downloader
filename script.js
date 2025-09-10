@@ -173,3 +173,48 @@ style.textContent = `
   40%, 60% { transform: translateX(4px); } }
 .search input.shake { animation: shake .35s; }`;
 document.head.appendChild(style);
+
+const toggleBtn = document.getElementById("themeToggle");
+  const body = document.body;
+    // Load preference
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️ Light Mode";
+    }
+    toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          toggleBtn.textContent = "☀️ Light Mode";
+          localStorage.setItem("theme", "dark");
+        } 
+        else {
+          toggleBtn.textContent = "🌙 Dark Mode";
+          localStorage.setItem("theme", "light");
+        }
+      }
+    );
+
+// Clipboard paste into input
+document.getElementById("pasteBtn").addEventListener("click", async () => {
+  const input = document.getElementById("videoUrl");
+
+  try {
+    const text = await navigator.clipboard.readText(); // read from clipboard
+    if (!text) {
+      alert("Clipboard is empty!");
+      return;
+    }
+
+    input.value = text; // paste into the input field
+    input.focus();
+
+    // Optional: highlight the pasted text
+    input.setSelectionRange(0, input.value.length);
+
+    // Optional: tooltip instead of alert
+    console.log("Pasted from clipboard:", text);
+  } catch (err) {
+    console.error("Failed to read clipboard", err);
+    alert("Clipboard access denied. Please allow clipboard permissions.");
+  }
+});

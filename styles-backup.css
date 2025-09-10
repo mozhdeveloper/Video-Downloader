@@ -56,6 +56,20 @@ body {
   color: var(--ligh-text); /* overridden in dark-mode */
 }
 
-#downloadForm .form-select {
-    
+
+/*****************for download button container*/
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* optional spacing */
+}
+
+/*****************for paste button*/
+.btn-container.fa-paste {}
+
+/*****************for button button*/
+.btn-logo {
+  width: 40px;   /* keeps the logo small */
+  height: 30px;  /* make it square */
+  object-fit: contain; /* keeps proportions */
 }
