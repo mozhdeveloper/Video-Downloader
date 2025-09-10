@@ -125,33 +125,6 @@ navToggle?.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
-/*
-form.addEventListener('submit', (e) => {
-                e.preventDefault();
-  const value = input.value.trim();
-
-  try {
-    const u = new URL(value);
-    // Basic image validation
-    const isImage = /\.(png|jpe?g|gif|webp|svg|bmp|ico)$/i.test(u.pathname);
-    if (!isImage) throw new Error('Please paste a direct image URL.');
-    // “Fake” search action: open in a new tab (placeholder for downloader logic)
-    window.open(u.toString(), '_blank', 'noopener,noreferrer');
-    // Blur any focused button to clear hover/active visual state
-    const active = document.activeElement;
-    if (active && active.tagName === 'BUTTON') {
-      active.blur();
-    }
-  } catch {
-    input.focus();
-    input.setSelectionRange(0, input.value.length);
-    input.classList.add('shake');
-    setTimeout(() => input.classList.remove('shake'), 350);
-    alert('Enter a valid direct image URL.');
-  }
-});
-*/
-
 // Ensure the search button returns to normal on touch devices
 document.addEventListener('touchend', (e) => {
   const target = e.target;
