@@ -1,52 +1,18 @@
-/* Default: Light mode */
-:root {
-  --primary: #ffc107;
-  --primary-dark: #e0a800;
-  --dark: #212529;      /* used for text */
-  --light: #ffffff;     /* light background */
-  --light-dark: #f8f9fa; /* slightly off-white */
-}
-
 body {
   background: 
     radial-gradient(circle at top center, #ff1ef4 7%, transparent 55%),   /* top circle */
     radial-gradient(circle at left top, #fc068d 5%, transparent 50%), /* left circle */
     radial-gradient(circle at right top, #09acdd 5%, transparent 50%),/* right circle */
     #ffffff00; /* fallback background */
-  
-  background-blend-mode: screen; /* let gradients blend nicely */
-  min-height: 100vh;
-  background-attachment: fixed;
-  background-size: 100%;    
-  color: #212529;
 }
 
-
-/* Dark mode overrides */
-.dark-mode {
-  --light: #121212;
-  --dark: #f8f9fa;
-  --light-dark: #2c3034;
-  --ligh-text: black;
-}
-
-/* Apply vars */
-body {
-  /*background: var(--light); */
-  color: var(--dark);
-}
-
-.form-control, .form-select {
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  color: var(--dark);
-}
-
-.dark-mode .form-control,
-.dark-mode .form-select {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--light-text); /* overridden in dark-mode */
+/*******Main control of Dark Mode Color********/
+body.dark-mode {
+  background: 
+    radial-gradient(circle at top center, #ff1ef4 0%, transparent 47%),
+    radial-gradient(circle at left top, #fc068d 1%, transparent 25%),
+    radial-gradient(circle at right top, #09acdd 1%, transparent 25%),
+    #121212;
 }
 
 .form-control, .form-select {
@@ -70,8 +36,6 @@ body {
   margin-top: 20px; /* optional spacing */
 }
 
-/*****************for paste button*/
-.btn-container.fa-paste {}
 
 /*****************for button button*/
 .btn-logo {
