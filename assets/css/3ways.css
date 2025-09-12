@@ -1,0 +1,33 @@
+/* Dark mode general background */
+.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Headings */
+.dark-mode h2,
+.dark-mode h5 {
+  color: #fff !important;
+}
+
+/* Paragraphs */
+.dark-mode p {
+  color: #ccc !important;  /* lighter grey text */
+}
+
+/* Step cards */
+.dark-mode .card-body {
+  background-color: #1e1e1e;  /* dark background */
+  background: rgba(255, 255, 255, 0.08); /* semi-transparent white */
+  border-radius: 16px;
+  backdrop-filter: blur(12px); /* frosted glass blur */
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4); /* floating effect */
+  transition: all 0.3s ease;
+  
+
+}
+
+

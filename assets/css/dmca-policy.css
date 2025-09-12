@@ -7,6 +7,8 @@
 /* Hero */
 .hero {
   padding: 20px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .info-box.hero-box {
@@ -42,6 +44,7 @@ text-decoration: none;
   padding: 0px 0px;
 }
 
+/* Default (light mode) */
 .blacktext-container {
-  color: #573a3a;
+  color: #000; /* or your preferred dark text */
 }

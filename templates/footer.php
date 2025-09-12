@@ -7,10 +7,10 @@
         <div>
             <ul class="navbar-nav ms-auto d-flex flex-row justify-space-between gap-5 mb-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="terms.html">Terms of Service</a>
+                    <a class="nav-link" href="terms.php">Terms of Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="policy.html">Privacy Policy</a>
+                    <a class="nav-link" href="privacy-policy.php">Privacy Policy</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="dmca-policy.php">DMCA</a>

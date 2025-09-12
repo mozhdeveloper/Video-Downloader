@@ -23,6 +23,15 @@ body.dark-mode {
     #121212;
 }
 
+body.dark-mode .blacktext-container {
+  color: #fff; /* white text */
+}
+
+/* Optional: make links visible in dark mode */
+body.dark-mode .blacktext-container a {
+  color: #d8b4fe; /* your lavender accent */
+}
+
 .form-control, .form-select {
   background-color: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.2);

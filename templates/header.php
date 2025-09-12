@@ -7,16 +7,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/global-frontend.css">
     <link rel="stylesheet" href="assets/css/dmca-policy.css"> 
+    <link rel="stylesheet" href="assets/css/terms.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/3ways.css">
     <title>SaveSocial | Facebook Video Downloader | Youtube Video Downloader | Instagram Video Downloader</title>
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
     <div class="container">
+
         <a class="navbar-brand d-flex align-items-center justify-space-between" href="#">
-            <i class="fas fa-download me-2"></i>
-            <span>SaveSocial</span>
+            <img src="assets/img/savesocial-logo2.png" alt="SaveSocial Logo" 
+         style="height: 40px; width: auto; margin-right: 8px;">
         </a>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,6 +34,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="image-downloader.php">Image Downloader</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="story-downloader.php">Story Downloader</a>
                 </li>
             </ul>
         </div>

@@ -1,7 +1,6 @@
 <?php include 'templates/header.php'; ?>
     <section class="hero-section">
         <div class="container">
-
             <div class="page-wrap">
                 <!-- Main Content -->
                 <main class="main hero">
