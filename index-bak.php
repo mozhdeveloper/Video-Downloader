@@ -1,4 +1,7 @@
-
+<?php
+// index.php
+require_once 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles-backup.css">
     <title>Video Downloader</title>
 </head>
 <body>
@@ -49,7 +52,6 @@
                         <h1 class="display-4 fw-bold mb-3 text-warning">Video Downloader</h1>
                         <p class="lead mb-4 text-light">Get your favorite videos now with this FREE, QUICK & Simple Video Downloader!</p>
                         
-                        <!-- Important -->
                         <form id="downloadForm" class="mb-4">
                             <div class="input-group mb-3">
                                 <input type="url" id="videoUrl" name="url" class="form-control form-control-lg" 
@@ -69,7 +71,6 @@
                                 </div>
                             </div>
                         </form>
-                        <!-- /Important -->
                         
                         <div class="platforms-section mt-4">
                             <p class="text-muted mb-3">Supported Platforms</p>

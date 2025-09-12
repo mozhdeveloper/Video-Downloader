@@ -1,0 +1,47 @@
+.page-wrap {
+  min-height: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Hero */
+.hero {
+  padding: 20px;
+}
+
+.info-box.hero-box {
+  text-align: left;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 880px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.info-box.hero-box h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #573a3a;
+}
+
+.info-box.hero-box ul {
+  line-height: 2;
+}
+
+a[href^="mailto:"] {
+color: #595757;   
+font-weight: bold;
+text-decoration: none;
+}
+
+.container {
+  padding: 0px 0px;
+}
+
+.blacktext-container {
+  color: #573a3a;
+}

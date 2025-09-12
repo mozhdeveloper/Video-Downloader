@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/global-frontend.css">
-    <link rel="stylesheet" href="assets/css/dmca-policy-test2.css">
-    <title>Document</title>
-</head>
-
-<body>
+<?php include 'templates/header.php'; ?>
     <section class="hero-section">
         <div class="container">
-            <!-- Toggle Button Row -->
-            <div class="d-flex justify-content-end pt-3">
-                <button id="themeToggle" class="btn btn-sm btn-outline-secondary">
-                    🌙 Dark Mode
-                </button>
-            </div>
 
             <div class="page-wrap">
                 <!-- Main Content -->
                 <main class="main hero">
                     <div class="container">
                         <div class="info-box hero-box">
-                            <h1>📑 DMCA Policy</h1>
+                            <h1 class="text-white">📑 DMCA Policy</h1>
                             <div class="blacktext-container">
                             <p>
                                 SaveSocial.app respects intellectual property rights. If you believe
@@ -77,7 +60,4 @@
             </div>
     </section>
     <!-- Bootstrap & Custom JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script-backup.js"></script>
-</body>
-</html>
+<?php include 'templates/footer.php'; ?>

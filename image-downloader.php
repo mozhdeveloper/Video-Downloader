@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="assets/css/global-frontend.css">
-    <title>Document</title>
-</head>
-
-<body>
+<?php include 'templates/header.php'; ?>
     <section class="hero-section">
         <div class="container">
-            <!-- Toggle Button Row -->
-            <div class="d-flex justify-content-end pt-3">
-                <button id="themeToggle" class="btn btn-sm btn-outline-secondary">
-                    🌙 Dark Mode
-                </button>
-            </div>
             
             <div class="row justify-content-center align-items-center min-vh-100 py-5">
                 <div class="col-lg-8 col-md-10 text-center">
@@ -63,19 +46,19 @@
                                     <p class="text-muted mb-3">Supported Platforms</p>
                                     <div class="d-flex justify-content-center flex-wrap gap-5">
                                         <div class="platform-item text-dark">
-                                            <img src="facebook.svg" alt="Facebook Logo" class="icon">
+                                            <img src="assets/img/facebook.svg" alt="Facebook Logo" class="icon">
                                             <span>Facebook</span>
                                         </div>
                                         <div class="platform-item text-dark">
-                                             <img src="tiktok.svg" alt="Tiktok Logo" class="icon">
+                                             <img src="assets/img/tiktok.svg" alt="Tiktok Logo" class="icon">
                                             <span>TikTok</span>
                                         </div>
                                         <div class="platform-item text-dark">
-                                             <img src="instagram.svg" alt="Instagram Logo" class="icon">
+                                             <img src="assets/img/instagram.svg" alt="Instagram Logo" class="icon">
                                             <span>Instagram</span>
                                         </div>
                                         <div class="platform-item text-dark">
-                                            <img src="youtube.svg" alt="Youtube Logo" class="icon-yt">
+                                            <img src="assets/img/youtube.svg" alt="Youtube Logo" class="icon-yt">
                                             <span>Youtube</span>
                                         </div>
                                     </div>
@@ -98,8 +81,4 @@
             </div>
         </div>
     </section>
-    <!-- Bootstrap & Custom JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script-backup.js"></script>
-</body>
-</html>
+<?php include 'templates/footer.php'; ?>
