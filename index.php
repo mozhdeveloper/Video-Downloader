@@ -14,7 +14,7 @@ require_once 'config.php';
                                 <form id="downloadForm" class="mb-4">
                                     <div class="row justify-content-center g-2 align-items-center">
                                         <!-- Select dropdown -->
-                                        <div class="col-md-3 col-12">
+                                        <div class="col-md-3 col-12 d-none">
                                             <select id="videoFormat" name="format" class="form-select form-select-lg">
                                                 <option value="best">Best Quality</option>
                                                 <option value="worst">Low Quality</option>

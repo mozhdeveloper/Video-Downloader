@@ -57,28 +57,28 @@ if ( downloadForm ) {
           progressText.textContent = 'Finalizing...';
           
           if (data.success) {
-              progressBar.style.width = '100%';
-              progressText.textContent = 'Download ready!';
-              
-              // Show success message
-              resultContainer.innerHTML = `
-                  <p class="mt-3 text-success">Video downloaded successfully!</p>
-                  <a href="${data.download_url}" class="download-link text-warning" id="downloadLink">Didn't work? Click here to download manually.</a>
-              `;
-              resultContainer.className = 'result success';
-              resultContainer.style.display = 'block';
-              
-              // Automatically start download after a short delay
-              setTimeout(() => {
-                  document.getElementById('downloadLink').click();
-                  
-                  // Reset form after successful download
-                  setTimeout(() => {
-                      progressContainer.style.display = 'none';
-                      document.getElementById('videoUrl').value = '';
-                  }, 2000);
-              }, 1000);
-              
+            progressBar.style.width = '100%';
+            progressText.textContent = 'Preview ready!';
+
+            // Show video preview and manual download button
+            resultContainer.innerHTML = `
+                <p class="mt-3 text-success">Preview your video below:</p>
+                <video controls width="400" src="preview.php?file=${data.filename}" class="mb-2"></video>
+                <br>
+                <button id="manualDownloadBtn" class="btn btn-warning mt-2">Download Video</button>
+                <a href="download.php?file=${data.filename}" class="download-link text-warning" style="display:none;" id="downloadLink">Manual Download</a>
+            `;
+            resultContainer.className = 'result success';
+            resultContainer.style.display = 'block';
+
+            // Manual download on button click
+            document.getElementById('manualDownloadBtn').addEventListener('click', () => {
+                document.getElementById('downloadLink').click();
+                setTimeout(() => {
+                    progressContainer.style.display = 'none';
+                    document.getElementById('videoUrl').value = '';
+                }, 2000);
+            });
           } else {
               throw new Error(data.error || 'Unknown error occurred');
           }
