@@ -4,11 +4,12 @@
             
             <div class="row justify-content-center align-items-center min-vh-100 py-5">
                 <div class="col-lg-8 col-md-10 text-center">
-                    <div class="hero-content bg-opacity-75 rounded-4 p-4 p-md-5 shadow-lg">
+                    <div class="hero-content bg-opacity-75 rounded-4 p-md-5 shadow-lg">
 
                         <h1 class="display-4 fw-bold mb-3 text-white">Story Downloader</h1>
                             <p class="lead mb-4 text-light">Get your favorite Stories now with this FREE, FAST & EASY Story Downloader!</p>
                                 <form id="downloadForm" class="mb-4">
+                                    
                                     <div class="row justify-content-center g-2 align-items-center">
                                         <!-- Select dropdown -->
                                         <div class="col-md-3 col-12">

@@ -3,7 +3,7 @@
         <div class="container">
             <div class="page-wrap">
                 <!-- Main Content -->
-                <main class="main hero2">
+                <main class="main-hero2">
                     <div class="container">
                         <div class="info-box hero-box2">
                             <h1 class="text-white">📑 Privacy Policy (SaveSocial.app)</h1>

@@ -44,6 +44,8 @@
                             </ul>
 
                             <h2>2. Send DMCA notices to:</h2>
+                            
+                            <div class="email-container">
                             <p>
                                 Email: <a href="mailto:dmca@savesocial.app">dmca@savesocial.app</a>
                             </p>
@@ -53,6 +55,7 @@
                                 Millennium Copyright Act.
                             </p>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </main>

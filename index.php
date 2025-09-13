@@ -4,17 +4,18 @@ require_once 'config.php';
     <?php include 'templates/header.php'; ?>
     <section class="hero-section">
         <div class="container">
-            
             <div class="row justify-content-center align-items-center min-vh-100 py-5">
-                <div class="col-lg-8 col-md-10 text-center">
-                    <div class="hero-content bg-opacity-75 rounded-4 p-4 p-md-5 shadow-lg">
+                <div class="row justify-content-center align-items-center min-vh-100 px-5 py-5">
+
+                    <div class="hero-content bg-opacity-75 rounded-4 p-4 shadow-lg custom-hero">
 
                         <h1 class="display-4 fw-bold mb-3 text-white">Video Downloader</h1>
                             <p class="lead mb-4 text-light">Get your favorite videos now with this FREE, FAST & Easy Video Downloader!</p>
                                 <form id="downloadForm" class="mb-4">
-                                    <div class="row justify-content-center g-2 align-items-center">
+                                    
+                                <div class="row justify-content-center g-2 align-items-center">
                                         <!-- Select dropdown -->
-                                        <div class="col-md-3 col-12 d-none">
+                                        <div class="col-md-3 col-12">
                                             <select id="videoFormat" name="format" class="form-select form-select-lg">
                                                 <option value="best">Best Quality</option>
                                                 <option value="worst">Low Quality</option>
@@ -100,7 +101,7 @@ require_once 'config.php';
     </section>
 
     <!-- How to Download Section -->
-<section class="how-to-download py-5">
+<section class="how-to-download px-4 py-5">
 
     <div class="container text-center">
 

@@ -1,14 +1,123 @@
-
-
 .custom-navbar {
   background: rgba(255, 255, 255, 0.2); /* light transparent */
   backdrop-filter: blur(12px);          /* frosted glass effect */
   -webkit-backdrop-filter: blur(12px);  /* Safari support */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 
 /* Dark Mode */
 body.dark-mode .custom-navbar {
   background: rgba(0, 0, 0, 0.4); 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Logo scaling */
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Default override */
+.navbar-toggler {
+  padding: 0.25rem 0.5rem; /* smaller clickable area */
+  font-size: 0.9rem;       /* icon size */
+  margin-right: 10px;
+}
+
+/* Custom Theme Toggle */
+.theme-toggle-btn {
+  background: linear-gradient(90deg, #d8b4fe, #6c227a);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  font-size: 10px;      /* Text size */
+  min-width: 20px;     /* Button width */
+  height: auto;         /* Button height */
+
+}
+
+.theme-toggle-btn:hover {
+  background: linear-gradient(90deg, #6c227a);
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.50);
+}
+
+body.dark-mode .theme-toggle-btn {
+  background: linear-gradient(90deg,  #6c227a, #d8b4fe); 
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+  background: linear-gradient(90deg, #d8b4fe);
+  transform: scale(1.05);
+}
+
+body.dark-mode .theme-toggle-btn:active {
+  transform: scale(0.50);
+}
+
+
+
+/********For mobile responsiveness******/
+
+/* 📱 Small devices (mobile, up to 576px) */
+@media (max-width: 576px) {
+
+  .logo-img {
+    height: 25px; /* smaller on mobile */
+  }
+
+  .custom-navbar {
+    background: rgba(255, 255, 255, 0.2); /* more solid for readability */
+    backdrop-filter: blur(6px);
+    z-index: 1050; /* higher than other elements */
+    transition: top 0.4s ease-in-out;
+  }
+  
+  body.dark-mode .custom-navbar {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+    font-size: 14px; /* smaller text for mobile */
+  }
+
+  .theme-toggle-btn {
+    font-size: 12px;      /* slightly smaller text */
+    padding: 6px 10px;    /* tighter padding */
+    min-width: 80px;      /* smaller width */
+  }
+
+
+  /********************.navbar-toggler {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+    margin-right: 10px;
+  } **************************************/
+}
+
+/* 📲 Tablets (576px - 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
+  .custom-navbar {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  body.dark-mode .custom-navbar {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .theme-toggle-btn {
+    font-size: 13px; 
+    padding: 7px 12px;
+    min-width: 90px;
+  }
 }

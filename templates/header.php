@@ -10,25 +10,31 @@
     <link rel="stylesheet" href="assets/css/terms.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/3ways.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <title>SaveSocial | Facebook Video Downloader | Youtube Video Downloader | Instagram Video Downloader</title>
 </head>
 <body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-    <div class="container">
+    <div class="container-fluid">
 
-        <a class="navbar-brand d-flex align-items-center justify-space-between" href="#">
-            <img src="assets/img/savesocial-logo2.png" alt="SaveSocial Logo" 
-         style="height: 40px; width: auto; margin-right: 8px;">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="index.php">
+            <img src="assets/img/savesocial-logo2.png" 
+                 alt="SaveSocial Logo" 
+                 class="logo-img">
         </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Hamburger Button (Mobile) -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto text-center">
                 <li class="nav-item">
                     <a class="nav-link active" href="index.php">Video Downloader</a>
                 </li>
@@ -39,12 +45,10 @@
                     <a class="nav-link" href="story-downloader.php">Story Downloader</a>
                 </li>
             </ul>
-        </div>
-
-        <div class="ml-5">
-            <!-- Toggle Button Row -->
-            <div class="d-flex justify-content-end">
-                <button id="themeToggle" class="btn btn-sm btn-outline-secondary">
+            
+            <!-- Dark Mode Toggle (Mobile + Desktop) -->
+            <div class="d-flex justify-content-center justify-content-lg-end mt-2 mt-lg-0">
+                <button id="themeToggle" class="theme-toggle-btn">
                     🌙 Dark Mode
                 </button>
             </div>

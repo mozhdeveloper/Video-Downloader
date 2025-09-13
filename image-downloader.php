@@ -4,14 +4,14 @@
             
             <div class="row justify-content-center align-items-center min-vh-100 py-5">
                 <div class="col-lg-8 col-md-10 text-center">
-                    <div class="hero-content bg-opacity-75 rounded-4 p-4 p-md-5 shadow-lg">
+                    <div class="hero-content bg-opacity-75 rounded-4 p-4 shadow-lg">
 
                         <h1 class="display-4 fw-bold mb-3 text-white">Image Downloader</h1>
                             <p class="lead mb-4 text-light">Get your favorite images now with this FREE, FAST & Easy Image Downloader!</p>
                                 <form id="downloadImageForm" class="mb-4">
                                     <div class="row justify-content-center g-2 align-items-center">
                                         <!-- Select dropdown -->
-                                        <div class="col-md-3 col-12 d-none">
+                                        <div class="col-md-3 col-12">
                                             <select id="imageFormat" name="format" class="form-select form-select-lg">
                                                 <option value="best">JPEG</option>
                                                 <option value="worst">PNG</option>
