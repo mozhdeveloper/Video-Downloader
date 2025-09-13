@@ -198,8 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         echo json_encode([
             'success' => true,
-            'filename' => $filename,
-            'download_url' => 'download.php?file=' . urlencode($filename)
+            'filename' => $filename
         ]);
         
     } catch (Exception $e) {
